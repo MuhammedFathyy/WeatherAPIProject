@@ -31,4 +31,17 @@ app.listen(port , () =>{
     console.log(`Everything is ok on the port ${port}!`);
 } )
 
+app.get('/getRoute' , (req , res) =>
+{
 
+    res.send(projectData);
+
+})
+
+
+app.post('/weatherdata' , (req , res) =>
+{
+    projectData = { ...req.body } ;
+    res.send();
+
+})
